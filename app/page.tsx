@@ -104,22 +104,22 @@ export default function page() {
       <p className='mt-[3rem] text-pink-600 text-center text-[2rem]'>FRUIT CATEGORIES</p>
       <Link className='hover:bg-pink-600 bg-black text-white p-3 rounded-lg' href={"/CategoryForm"}>add new category</Link>
     <div  className="flex gap-4 mt-[3rem]">
-      {/* {
+      {
         fruitCategories.map((fruitCategory,i) =>{
           return(
            <Link key={i} href={""}>
              <div  className="bg-white p-4 rounded-xl flex flex-col items-center justify-center gap-2 text-black hover:bg-pink-600 hover:text-white">
-      <div className="image">
-        <Image src={fruitCategory.image} alt='fruit' width={100} height={15}/>
-      </div>
-      <p>{fruitCategory.title}</p>
-      <p>{fruitCategory.description}</p>
-      <p>{fruitCategory.price}</p>
-      </div>
+              <div className="image">
+                <Image src={fruitCategory.image} alt='fruit' width={100} height={15}/>
+              </div>
+              <p>{fruitCategory.title}</p>
+              <p>{fruitCategory.description}</p>
+              <p>{fruitCategory.price}</p>
+            </div>
            </Link>
           )
         })
-      } */}
+      }
       <h2>test v1</h2>
     </div>
     <p className='text-pink-600 mt-[3rem] text-center text-[2rem]'>FRUIT PRODUCTS</p>
