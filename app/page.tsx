@@ -107,7 +107,7 @@ export default function page() {
         fruitCategories.map((fruitCategory,i) =>{
           return(
            <Link href={""}>
-             <div key={i} className="bg-white p-4 rounded-xl flex flex-col items-center justify-center gap-2 text-black hover:bg-pink-600 hover:text-white">
+             <div key={fruitCategory.title} className="bg-white p-4 rounded-xl flex flex-col items-center justify-center gap-2 text-black hover:bg-pink-600 hover:text-white">
       <div className="image">
         <Image src={fruitCategory.image} alt='fruit' width={100} height={15}/>
       </div>
@@ -125,7 +125,7 @@ export default function page() {
       {
         fruitProducts.map((fruitProduct,i) =>{
           return(
-            <div key={i} className="flex flex-col gap-3 bg-white p-3 items-center justify-center rounded-xl text-black hover:text-white hover:bg-pink-600">
+            <div key={fruitProduct.title} className="flex flex-col gap-3 bg-white p-3 items-center justify-center rounded-xl text-black hover:text-white hover:bg-pink-600">
         <Link href={""}>
         <p>{fruitProduct.title}</p>
         <p>{fruitProduct.description}</p>
