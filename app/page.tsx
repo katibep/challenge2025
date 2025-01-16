@@ -104,7 +104,7 @@ export default function page() {
       <p className='mt-[3rem] text-pink-600 text-center text-[2rem]'>FRUIT CATEGORIES</p>
       <Link className='hover:bg-pink-600 bg-black text-white p-3 rounded-lg' href={"/CategoryForm"}>add new category</Link>
     <div  className="flex gap-4 mt-[3rem]">
-      {
+      {/* {
         fruitCategories.map((fruitCategory,i) =>{
           return(
            <Link key={i} href={""}>
@@ -119,7 +119,7 @@ export default function page() {
            </Link>
           )
         })
-      }
+      } */}
     </div>
     <p className='text-pink-600 mt-[3rem] text-center text-[2rem]'>FRUIT PRODUCTS</p>
     <Link className='hover:bg-pink-600 bg-black text-white p-3 rounded-lg' href={""}>add new product</Link>
