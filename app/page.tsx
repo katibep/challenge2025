@@ -120,6 +120,7 @@ export default function page() {
           )
         })
       } */}
+      <h2>test v1</h2>
     </div>
     <p className='text-pink-600 mt-[3rem] text-center text-[2rem]'>FRUIT PRODUCTS</p>
     <Link className='hover:bg-pink-600 bg-black text-white p-3 rounded-lg' href={""}>add new product</Link>
