@@ -102,12 +102,12 @@ export default function page() {
         <Search/>
       </div>
       <p className='mt-[3rem] text-pink-600 text-center text-[2rem]'>FRUIT CATEGORIES</p>
-    <div className="flex gap-4 mt-[3rem]">
+    <div  className="flex gap-4 mt-[3rem]">
       {
         fruitCategories.map((fruitCategory,i) =>{
           return(
-           <Link href={""}>
-             <div key={fruitCategory.title} className="bg-white p-4 rounded-xl flex flex-col items-center justify-center gap-2 text-black hover:bg-pink-600 hover:text-white">
+           <Link key={i} href={""}>
+             <div  className="bg-white p-4 rounded-xl flex flex-col items-center justify-center gap-2 text-black hover:bg-pink-600 hover:text-white">
       <div className="image">
         <Image src={fruitCategory.image} alt='fruit' width={100} height={15}/>
       </div>
@@ -125,16 +125,16 @@ export default function page() {
       {
         fruitProducts.map((fruitProduct,i) =>{
           return(
-            <div key={fruitProduct.title} className="flex flex-col gap-3 bg-white p-3 items-center justify-center rounded-xl text-black hover:text-white hover:bg-pink-600">
-        <Link href={""}>
+           <Link key={i} href={""}>
+             <div className="flex flex-col gap-3 bg-white p-3 items-center justify-center rounded-xl text-black hover:text-white hover:bg-pink-600">
         <p>{fruitProduct.title}</p>
         <p>{fruitProduct.description}</p>
         <p>{fruitProduct.price}</p>
         <div className="image">
           <Image src={fruitProduct.image} alt='' width={100} height={15}/>
         </div>
-        </Link>
       </div>
+           </Link>
           )
         })
       }
