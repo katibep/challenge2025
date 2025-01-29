@@ -17,24 +17,6 @@ const fruitCategories = [
     description: "Small, juicy, and vibrant fruits like strawberries, blueberries, and raspberries, perfect for snacking or desserts.",
     price: 5.49
   },
-  {
-    image: "/fruiit4.jpg",
-    title: "Tropical Fruits",
-    description: "Realistic banana pattern with compositions of banana fruit tropical leavrs flowers and slices with turquoise",
-    price: 6.99
-  },
-  {
-    image: "/fruit5.jpg",
-    title: "Stone Fruits",
-    description: "Side view of pattern of fruits as peach cherries plums pears and jar of apricots on wooden background",
-    price: 4.79
-  },
-  {
-    image: "/aplles.jpg",
-    title: "Apples and Pears",
-    description: "Classic, crisp, and versatile fruits that are perfect for snacking, baking, or juicing.",
-    price: 3.99
-  },
  
 ];
 const fruitProducts = [
@@ -50,65 +32,24 @@ const fruitProducts = [
     price: 5.49,
     image: "/purplejuice.jpg"
   },
-  {
-    title: "Tropical Fruits",
-    description: "Exotic and sweet fruits such as pineapples, mangoes, and papayas, bringing a taste of the tropics.",
-    price: 6.99,
-    image: "/pinkjuice.jpg"
-  },
-  {
-    title: "Stone Fruits",
-    description: "Fruits with a pit at their center, including peaches, plums, and cherries, known for their juicy sweetness.",
-    price: 4.79,
-    image: "/whitejuice.jpg"
-  },
-  {
-    title: "Apples and Pears",
-    description: "Classic, crisp, and versatile fruits that are perfect for snacking, baking, or juicing.",
-    price: 3.99,
-    image: "/applejuice.jpg"
-  },
-  {
-    title: "Melons",
-    description: "Large, refreshing fruits like watermelon, cantaloupe, and honeydew, ideal for summer days.",
-    price: 7.49,
-    image: "/melon juice.jpg"
-  },
-  {
-    title: "Apples and Pears",
-    description: "Classic, crisp, and versatile fruits that are perfect for snacking, baking, or juicing.",
-    price: 3.99,
-    image: "/applejuice.jpg"
-  },
-  {
-    title: "mixtures",
-    description: "Large, refreshing fruits like watermelon, cantaloupe, and honeydew, ideal for summer days.",
-    price: 7.49,
-    image: "/juice8.jpg"
-  },
-  {
-    title: "Citrus Fruits",
-    description: "Zesty and refreshing fruits packed with vitamin C, including oranges, lemons, and grapefruits.",
-    price: 4.99,
-    image: "/greenjuice.jpg"
-  }
+ 
 ];
 
 export default function page() {
   return (
-    <div className='p-[3rem] bg-slate-300 h-full'>
-      <div className="flex items-center justify-center gap-[2rem]">
-        <Input className='w-[50%]' placeholder='search...'/>
+    <div className='p-[1rem] md:p-[3rem] bg-slate-300 h-full sm:w-[100%] '>
+      <div className="flex gap-2 md:flex items-center justify-center md:gap-[2rem]">
+        <Input className='w-[100%] md:w-[50%]' placeholder='search...'/>
         <Search/>
       </div>
-      <p className='mt-[3rem] text-pink-600 text-center text-[2rem]'>FRUIT CATEGORIES</p>
-      <Link className='hover:bg-pink-600 bg-black text-white p-3 rounded-lg' href={"/CategoryForm"}>add new category</Link>
-    <div  className="flex gap-4 mt-[3rem]">
+      <p className='mt-6 text-[1rem] mb-6  md:mt-[3rem] text-pink-600 text-center md:text-[3rem] '>FRUIT CATEGORIES</p>
+      <Link className='hover:bg-pink-600  bg-black text-white p-1 md:p-3 rounded-sm md:rounded-lg' href={"/add-new"}>add new category</Link>
+    <div  className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-4 mt-[1rem] md:mt-[3rem]  w-full ">
       {
         fruitCategories.map((fruitCategory,i) =>{
           return(
            <Link key={i} href={""}>
-             <div  className="bg-white p-4 rounded-xl flex flex-col items-center justify-center gap-2 text-black hover:bg-pink-600 hover:text-white">
+             <div  className="bg-white p-4 rounded-xl flex flex-col items-center justify-center gap-2 w-full text-black hover:bg-pink-600 hover:text-white">
               <div className="image">
                 <Image src={fruitCategory.image} alt='fruit' width={100} height={15}/>
               </div>
@@ -121,9 +62,9 @@ export default function page() {
         })
       }
     </div>
-    <p className='text-pink-600 mt-[3rem] text-center text-[2rem]'>FRUIT PRODUCTS</p>
-    <Link className='hover:bg-pink-600 bg-black text-white p-3 rounded-lg' href={""}>add new product</Link>
-    <div className="grid grid-cols-3 gap-4 mt-[4rem]">
+    <p className='text-pink-600 mt-6 text-center text-[1rem] mb-6 md:text-[2rem]'>FRUIT PRODUCTS</p>
+    <Link className='hover:bg-pink-600 bg-black text-white p-1 md:p-3 rounded-sm md:rounded-lg' href={""}>add new product</Link>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-3 md:mt-[4rem]">
       {
         fruitProducts.map((fruitProduct,i) =>{
           return(
@@ -133,7 +74,7 @@ export default function page() {
         <p>{fruitProduct.description}</p>
         <p>{fruitProduct.price}</p>
         <div className="image">
-          <Image src={fruitProduct.image} alt='' width={100} height={15}/>
+          <Image src={fruitProduct.image} alt='fruit' width={100} height={15}/>
         </div>
       </div>
            </Link>
