@@ -46,7 +46,7 @@ async function onSubmit(data:FormInputs){
   // }
 
   return (
-    <div className="for w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <div className="for w-full md:max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
       <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
         <h5 className="text-xl font-medium text-gray-900 dark:text-white">Shop Now</h5>
 
