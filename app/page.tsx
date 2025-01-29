@@ -1,3 +1,4 @@
+import { getAllCats } from '@/actions/category';
 import { Input } from '@/components/ui/input'
 import { Search } from 'lucide-react'
 import Image from 'next/image'
@@ -35,7 +36,9 @@ const fruitProducts = [
  
 ];
 
-export default function page() {
+export default async function page() {
+ const allCategories = await getAllCats()
+ console.log(allCategories)
   return (
     <div className='p-[1rem] md:p-[3rem] bg-slate-300 h-full sm:w-[100%] '>
       <div className="flex gap-2 md:flex items-center justify-center md:gap-[2rem]">
@@ -46,16 +49,15 @@ export default function page() {
       <Link className='hover:bg-pink-600  bg-black text-white p-1 md:p-3 rounded-sm md:rounded-lg' href={"/add-new"}>add new category</Link>
     <div  className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-4 mt-[1rem] md:mt-[3rem]  w-full ">
       {
-        fruitCategories.map((fruitCategory,i) =>{
+        allCategories?.map((category,i) =>{
           return(
            <Link key={i} href={""}>
              <div  className="bg-white p-4 rounded-xl flex flex-col items-center justify-center gap-2 w-full text-black hover:bg-pink-600 hover:text-white">
               <div className="image">
-                <Image src={fruitCategory.image} alt='fruit' width={100} height={15}/>
+                <Image src={category.image} alt='fruit' width={100} height={15}/>
               </div>
-              <p>{fruitCategory.title}</p>
-              <p>{fruitCategory.description}</p>
-              <p>{fruitCategory.price}</p>
+              <p>{category.name}</p>
+              <p>{category.price}</p>
             </div>
            </Link>
           )
